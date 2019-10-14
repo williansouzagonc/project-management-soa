@@ -24,3 +24,12 @@ Application for manage projects
     cp .env.example .env
     npm test
     ```
+
+## Improvements
+
+- Docs (OpenAPI, Swagger)
+- Better logs
+- Better error handling
+- Tests (Due to simplicity of the api and lack of time I didn't include tests)
+- Authentication (JWT, BasicAuth)
+- Pagination
