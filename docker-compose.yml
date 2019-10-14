@@ -1,0 +1,21 @@
+version: "3.2"
+
+services:
+  node:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /node_modules
+    command: npm start
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017/projectmanager
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
